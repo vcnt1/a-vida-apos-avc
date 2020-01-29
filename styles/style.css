@@ -1,0 +1,301 @@
+<style>
+        body{
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .modal-texto{
+            position: absolute;
+            overflow:auto;
+            padding-left:10px;
+            top:0px;
+            width:840px;
+            height:100%;
+            background-color: rgba(0,0,0, 0.9);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: default;
+        }
+        .modal-texto.fullScreen{
+            
+            width:100%;
+            height:100%;
+        }
+        .modal-texto.amostrar{
+            
+            display: flex;
+            
+        }
+        .modal-texto::-webkit-scrollbar-track {
+            background-color: #F4F4F4;
+        }
+        .modal-texto::-webkit-scrollbar {
+            width: 3px;
+            background: #000;
+        }
+        .modal-texto::-webkit-scrollbar-thumb {
+            background: #000;
+        }
+        .depressao{
+            display: none;
+        }
+        .hemiplegia{
+            
+            display: none;
+        }
+        .visao{
+            display:none;
+        }
+        .raciocinio{
+            display:none;
+        }
+        .fala{
+            display:none;
+        }
+        .tcredito{
+            display:none;
+        }
+
+        .tmodal{
+            color:white;
+            font-size: 20px;
+
+            text-align: justify;
+            width:600px;
+            padding-top:300px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom:5px;
+            border-width:500px;
+            border-color: #3c8288;
+            
+        }
+
+        
+        .fecharTexto{
+            position: absolute;
+            font-size: 1.2em;
+            top: 10px;
+            right: 8px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            color:white;
+            background:black;
+            cursor: pointer;
+            box-shadow: 0  4px 4px 0 rgba(0,0,0,.30);
+
+        }
+
+
+         .modal-video{
+            position: absolute;
+            padding-left:10px;
+            top:0px;
+            width:840px;
+            height:100%;
+            min-width:840px;
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0,0,0, 0.7);
+            cursor: default;
+        }
+        .modal-video.fullScreen{
+            
+            width:100%;
+            height:100%;
+            
+            
+        }
+
+        .modal-video.mostrar{
+            display:flex;
+        }
+        .modal{
+            width: 560px;
+            background: white;
+            min-width: 300px;
+            padding: 4px;
+            position: relative;
+
+        }
+
+        @keyframes modal{
+            from{
+                opacity: 0;
+                transform: translate3d(0,-60px,0);
+            }
+            to{
+                opacity: 1;
+                transform: translate3d(0,-0,0);
+            }
+        }
+        .mostrar .modal{
+            animation: modal .3s;
+        }
+        .fechar{
+            position: absolute;
+            font-size: 1.2em;
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            color:white;
+            background:black;
+            cursor: pointer;
+            box-shadow: 0  4px 4px 0 rgba(0,0,0,.30);
+
+        }
+
+        .app{
+            position: relative;
+            padding-left:190px;
+            top:130px;
+
+            
+        }
+        .myCanvas{
+            filter:blur(0px);
+
+        }
+        
+        .btn_full{
+            height:0;
+            position: relative;
+            display: block;
+            z-index: 265;
+            padding-left: 810px;
+            top: 410px;
+            
+        }
+        .btn_full.fscreen{
+            position: relative;
+            display: block;
+            z-index: 265;
+            padding-left: 97%;
+
+            top: 95%;
+            
+        }
+
+        .botao {
+            background-image:url("img/fullscreen.png");
+        }
+
+        .app.full{
+            padding-left: 0;
+
+            
+        }
+        
+
+        
+        .menu_cima{
+            position: absolute;
+            z-index: 200;
+            left: 0px;
+            height:100px;
+            width: 100vw;
+            min-width: 1500px;
+            right:0px;
+            top:0px;
+            background-color: #3c8288;
+            padding: 0px;
+            
+            
+        }.texto_menu{
+            font-size: 28;
+            color:#F1EDEE;
+            padding-top:35px;
+            padding-left: 68%;
+            
+
+        }
+
+        .div_foto{
+            position: absolute;
+            left: 0px;
+            height:10px;
+            width: 100vw;
+            min-width: 1500px;
+            right:0px;
+            top:100px;
+            
+            padding: 0px;
+            text-align: center;
+            background-color: #8AA29E;
+        }
+        .centro{
+            position:relative;
+            top:90px;
+            height:100vh;
+            min-height:800px;
+            width:74.5%;
+            min-width:1165px;
+            left:13%;
+            box-shadow: 0  4px 4px 0 rgba(0,0,0,.30);
+
+        }
+        .quadrinho{
+            position:relative;
+            width:8px;
+            height: 20px;
+            background-color: #3c8288;
+            float:left;
+        }
+        .textoi{
+            padding-left:15px;
+            margin-bottom: 15px;
+        }
+        .video{
+            position: absolute;
+            top:610px;
+            padding-left: 190px;
+        }
+        .quadroMaior{
+            cursor: pointer;
+            width:163.2px;
+            height:91.8px;
+            margin-right: 8px;
+            float:left;
+            background-size:163.2px 91.8px;
+            background-repeat:no-repeat;
+        }
+        .titulo{
+            position: absolute;
+            left:25.4%;
+            top:122px;
+        }
+        .logo{
+            margin-top: 5px;
+            background-image:url('img/logo/2.png');
+            background-size: 191.7px 86.3px;
+            background-repeat:no-repeat;
+            width:191.7px;
+            height: 86.3px;
+            margin-left: 210px;
+            float: left;
+            
+        }
+        .dcredito{
+            display: none;
+        }
+        .logocredito{
+            margin-top: 5px;
+            background-size:153.6px 89.6px;
+            background-repeat:no-repeat;
+            width:153.6px;
+            height: 89.6px;
+            margin-right: -10px;
+            margin-left: 0px;
+            float: left;
+        }
+    </style>

@@ -1,0 +1,6 @@
+0 - Hemiplegia
+1 - depressao
+2 - visao
+3 - raciocinio
+4 - fala
+5 - extra pra dar certo o codigo que reaproveitei

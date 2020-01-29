@@ -1,0 +1,278 @@
+<html lang="pt-br">
+<head>
+    <title>Projeto</title>
+    <meta charset="utf-8"/>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body id="corpo"  >
+    <font face="Arial">
+    <div class="titulo">
+        <h1>Sequelas pós AVC</h1>
+        <div class="quadrinho"></div>
+        
+        <div class="textoi">Infográfico</div>
+    </div>
+
+
+    <div class="menu_cima">
+        <div class="logo" style="background-image: url('img/logo/2.png')"></div>
+        <div class="texto_menu">
+            Home | Sobre | Contato
+        </div>
+    </div>
+    <div class="div_foto"></div>
+    <div id="centro" class="centro">
+        
+        <div id="app" class="app" >
+            <div class="btn_full" id="btn_full">
+                    <input type=image src="img/fullscreen.png" width="32" height="32" onclick="toggleFullScreen('app')"></input>
+            </div>
+            
+            <canvas id="myCanvas" class="myCanvas"></canvas>
+            	
+            <script src="js/lib/main/three.js"></script>
+            <script src="js/lib/main/three.min.js"></script>
+            <script src="js/lib/main/inflate.min.js"></script>
+            <script src="js/lib/main/threex.domevents.js"></script>
+
+            <script src="js/lib/loader/GLTFLoader.js"></script>
+            <script src="js/lib/loader/DDSLoader.js"></script>
+            <script src="js/lib/loader/MTLLoader.js"></script>
+            <script src="js/lib/loader/OBJLoader.js"></script>
+            <script src="js/lib/loader/FBXLoader.js"></script>
+
+            <script src="js/lib/controle/OrbitControls.js"></script>
+            <script src="js/lib/controle/pos.js"></script>  
+            <script src="js/principal/function.js"></script>
+            <script src="js/principal/main.js"></script>
+            <script src="js/principal/cliques.js"></script>
+            <script src="js/principal/appFullScreen.js"></script>
+
+           
+
+
+            <div id="modal-video" class="modal-video">
+                <div class="modal">
+                    <button class="fechar" onclick="fechaModal('modal-video')">X</button>
+                    <iframe id="iframeV" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>  
+            </div>
+
+            <div id="modal-texto" class="modal-texto">
+                 
+                <button class="fecharTexto" onclick="fechaModal('modal-texto')">X</button>
+                <div class="tmodal" id="tmodal">
+                    <p class="depressao" id="depressao">
+                        Vida após um AVC - Depressão<br><br>
+                            A depressão é uma das sequelas mais recorrentes em indivíduos que sofreram um acidente 
+                            vascular cerebral (AVC).<br>
+
+                            Essa patologia está associada intimamente com o agravamento do prejuízo no funcionamento físico e cognitivo, gerando hospitalizações prolongadas que reduzem, portanto, a qualidade de vida dos mesmos.<br><br>
+
+                            O transtorno depressivo pode ser causado pela própria patologia ou por consequência de suas sequelas.<br>
+
+                            Os sintomas do transtorno depressivo são: perda ou aumento brusco de apetite, falta de ânimo, insônia, irritabilidade, ansiedade, apatia, alto grau de pessimismo, insegurança, sensação de vazio e falta de vontade em fazer atividades antes prazerosas.<br><br>
+
+                            Quando é diagnosticado como Depressão Pós-AVC e inicia-se o tratamento, observa-se a melhora na recuperação funcional e consequentemente a redução do prejuízo cognitivo.<br>
+
+                            Para que haja uma recuperação adequada, é de suma importância o acompanhamento de profissionais e o apoio de familiares e amigos. <br>
+
+                            O paciente pode conseguir atendimento na rede pública, de modo a pedir encaminhamento para o próprio neurologista que lhe acompanha, ou procurar um dos Centros de atenção Psicossocial (CAPS).<br>
+                    </p>
+                    <p class="hemiplegia" id="hemiplegia">
+                        Vida após um AVC - Hemiplegia<br><br>
+                        A hemiplegia, normalmente, é manifestada no lado oposto onde ocorreu o AVC, afetando, em proporções diferentes, o membro superior, tronco e membro inferior dos indivíduos.<br><br>
+
+                        - No membro superior, as sequelas são observadas no braço. Por consequência da fraqueza do braço, dores nas articulações, o indivíduo acaba impossibilitado de fazer as suas atividades diárias. Outro sintoma que pode aparecer é quando o braço fica encolhido, quando o paciente não consegue esticar, e assim o braço fica travado<br>
+
+                        Essa sequela apresentada no braço tende a ser a mais difícil de reversão, então, o indivíduo necessita  de reabilitação com terapia funcional e fisioterapia, principalmente,  a mobilidade dos membros e dá mais independência para a pessoa realizar suas atividades diárias.
+                        <br><br>
+
+                        - Já no tronco, a hemiplegia atrapalha seu desempenho em deitar e levantar.<br><br>
+
+                        - No membro inferior, a perna afetada apresenta dificuldade no desenvolvimento da marcha do indivíduo, fazendo com que esse precise de auxílio de muletas ou, até mesmo, cadeiras de rodas.<br>
+
+                        O primeiro ano de reabilitação é crítico. Depois disso, a possibilidade de melhora é muito reduzida,por isso deve se procurar tratamento o mais rápido possível.<br>
+
+                        Por norma o tratamento para a hemiplegia é feito somente com fisioterapia, hidroterapia e, por vezes, atividade física realizada de forma individual com um educador físico capaz.
+
+                        A cirurgia é realizada somente em último caso, quando a pessoa apresenta contraturas musculares, e é feita por meio do corte de alguns ligamentos para aliviar as contraturas.<br><br>
+
+                        O paciente deve procurar o posto de saúde mais próximo da sua região para solicitar a Fisioterapia.
+                        Em Fortaleza, o paciente pode ter uma dificuldade grande de conseguir atendimento pelo SUS, mas há algumas alternativas como o:
+                        - Centro de Neurorreabilitação SARAH: o paciente deve se cadastrar no site para esperar ser chamado e conseguir as orteses e a reabilitação.
+                        - NAMI - Núcleo de Atenção Médica Integrada da UNIFOR
+                        - Policlínica João Pompeu Lopes Randal 
+                        - UAPS Carlos Ribeiro
+                        - UAPS César Cals 6
+                        - UAPS Rigoberto Romero
+                        - Hospital José Martiniano de Alencar<br>
+                        É importante ressaltar que esse levantamento foi feito no ano de 2019 e dependendo do período que você está vendo esse vídeo, esses estabelecimentos podem ter sido desvinculados do SUS ou não terem vagas disponíveis.<br><br>
+
+                        Desse modo, apesar de não ser uma condição completamente reversível, a fisioterapia e outros tratamentos complementares irão ajudar os pacientes  a retomarem certos movimentos e com ajuda destes, poderão ter independência.
+                    </p>
+
+
+
+                    <p class="visao" id="visao">
+                        Vida após um AVC - Alterações Visuais<br><br>
+                            Os indivíduos perdem  metade do campo de visão de um olho, ou até a visão central. O que atrapalha sua capacidade de ler ou entender imagens e cuidar do seu próprio corpo. Normalmente as alterações visuais recuperam-se no primeiro mês, caso isto não aconteça neste período o problema tende a persistir.<br><br>
+
+                            Alguns AVC's (derrames) podem acometer a área do cérebro responsável pela visão, nesses casos o exame oftalmológico pode estar normal, globos oculares sem alterções. Assim, a imagem é capturada e enviada para o cérebro corretamente pelos olhos e nervos ópticos, contudo não é interpretada pelo cérebro, não ocorrendo a formação final da imagem.<br>
+                            Pode até haver alguma melhora com o tempo, devido ao processo de neuroadaptação (outras áreas do cérebro se adaptam para fazer funções diferentes da que normalmente executam), porém na maioria das vezes persiste algum grau variável de comprometimento visual, a depender do tamanho da área cerebral afetada no AVC.<br>
+
+                    </p>
+                    <p class="raciocinio" id="raciocinio">
+                        Vida após um AVC - Alterações de Raciocínio<br><br>
+                            As alterações de raciocínio podem ocorrer em uma menor frequência. E afetam a capacidade do indivíduo lembrar de nomes, datas e outras informações. Assim como em se concentrar para ler ou entender algo. Além disso, há também um comprometimento do planejamento de tomada de decisões, dificuldade para se orientar no espaço e “esquecimento” ou dificuldade em perceber estímulos ofertados pelo lado do corpo comprometido. Normalmente essa sequela aparece quando o lado direito do cérebro sofreu o AVC<br><br>
+
+                            O Terapeuta Ocupacional, um dos profissionais responsáveis pela reabilitação, que irá tratar essa condição, e o encaminhamento deve ser feito pelo médico para uma unidade de saúde que tenha esse profissional.<br><br>
+
+                            Em fortaleza, o paciente pode ter uma dificuldade grande de conseguir atendimento pelo SUS, mas há algumas alternativas como o:<br>
+
+                            - Centro de Neurorreabilitação SARAH: o paciente deve se cadastrar no site para esperar ser chamado e conseguir as orteses e a reabilitação.<br>
+
+                            - NAMI - Núcleo de Atenção Médica Integrada da UNIFOR<br>
+
+                            - Policlínica João Pompeu Lopes Randal <br>
+
+                            - UAPS Carlos Ribeiro<br>
+
+                            - UAPS César Cals 6<br>
+
+                            - UAPS Rigoberto Romero<br>
+
+                            - Hospital José Martiniano de Alencar<br><br>
+
+                            É importante ressaltar que esse levantamento foi feito no ano de 2019 e dependendo do período que você está lendo isso, esses estabelecimentos podem ter sido desvinculados do SUS ou não terem vagas disponíveis.
+
+                    </p>
+                    <p class="fala" id="fala">
+                        Vida após um AVC - Alterações na via oral<br><br>
+
+                        Elas podem ser passageiras, apresentam a dificuldade de fazer sons, e, também, a capacidade de engolir, portanto, apresenta um risco para engasgo ou aspiração. Nesses casos é importante que um Fonoaudiólogo consulte o paciente o mais rápido possível.<br><br>
+
+                        Essa sequela necessita de reabilitação feita por um Fonoaudiólogo e seu diagnóstico inclui avaliações de fala, funções cognitivas, compreensão e expressão da linguagem.<br><br>
+
+                        Em fortaleza, o paciente vai apresentar apenas duas opções para atendimento fonoaudiológico fora do hospital: <br><br>
+
+                        - Clínica particular ou no NAMI ( Núcleo de Atenção Médica Integrada da UNIFOR), no qual o paciente deve ir com o encaminhamento do Neurologista para receber atendimento.<br><br>
+
+                        É importante ressaltar que esse levantamento foi feito no ano de 2019 e dependendo do período que você está lendo isso, o NAMI pode não oferecer mais esse tipo de serviço ou não ter vagas disponíveis.
+
+                    </p>
+
+                    <p class="tcredito" id="tcredito">
+                        Créditos<br><br>
+
+                        Título: Vida após um AVC<br><br>
+
+                        Projeto Integrado segundo semestre de Sistemas e Mídias Digitais da Universida Federal do Ceará<br><br>
+                        Aplicação proposta por:<br>
+                        Ramon Távora Viana <br><br>
+
+                        Trabalho feito orgulhosamente por Pega Visão:<br>
+                        Design<br>
+                        Dimas Gabriel<br>
+                        Thalles Maciel<br><br>
+
+                        Ilustrações <br>
+                        Lucas Pardi<br><br>
+
+                        Modelagem 3D<br>
+                        Dimas Gabriel<br>
+                        Lucas Pardi<br><br>
+
+                        Programação <br>
+                        Felipe Henrique<br>
+                        Vicente Ferreira<br><br>
+
+                        Roteiro e vídeo<br>
+                        Rodrigo Vasconcelos<br>
+                        Thalles Maciel<br><br>
+
+                        Mentores:<br>
+                        ● Cognição e Tecnologias Digitais: Profs. José Aires e Raquel Freire.<br> 
+                        ● Narrativas Multimídia: Prof. Glaudiney Mendonça. <br>
+                        ● Programação II: Profs. Alysson Diniz e Ricardo Brauner.<br>
+                        ● Comunicação Visual I: Prof. Lucas Mamede<br><br>
+
+                        Monitores:<br>
+                        Ulysses Flexa<br>
+                        Carlos Matheus<br><br>
+
+                        As informações contidas nos vídeos e na aplicação foi toda construída pelo Ramon Távora Viana, cursando o Programa de Doutorado em Ciências da Reabilitação da Universidade Federal de Minas Gerais (início em 2016) na linha de pesquisa relacionada ao Acidente Vascular Cerebral<br><br>
+
+                        Vídeos criado pela a equipe, utilizando alguns sons, vídeos e imagens retiradas dos seguintes links. (Na descrição de cada vídeo também tem os links utilizados)<br>
+                        Pixabay:<br> https://pixabay.com/pt/ <br>
+                        Unsplash:<br> https://unsplash.com/<br>
+                        Videezy:<br> https://pt.videezy.com/ <br>
+                        Videvo:<br> https://www.videvo.net/ <br>
+                        Pexels:<br> https://www.pexels.com/ <br><br>
+
+                        Youtube Canais:<br>
+                        Equilibrium Medical: <br>https://www.youtube.com/channel/UCSa3l2GI_uIOEExwQ4ntLbA <br><br>
+                        Aveados - pessoas que sofreram acidente vascular encefalico avc<br>
+                        https://www.youtube.com/channel/UCq7ntf9i0m70YBGU7uKAzwg<br><br>
+                        Sikana Brasil:<br> https://www.youtube.com/channel/UC2AbKOt2O7HerC71jwGNjlw <br><br>
+                        Seja um Ambidestro:<br> https://www.youtube.com/channel/UCG3oEEST13KYZ1t8CLiXo3Q <br><br>
+                        Fisio Neuro Funcional:<br> https://www.youtube.com/channel/UCyDmemW6J7h05afCc1Do5-Q <br><br>
+                        Elisabete Castelon Konkiewitz<br>
+                        https://www.youtube.com/channel/UCrE1N1p5tTnErP5rUA8lrxA <br><br>
+                        neurorhbtv:<br> https://www.youtube.com/channel/UCX3w6vYll1EBXwUM0QyE58w<br> <br>
+                        Nilton Jr: <br>https://www.youtube.com/channel/UCsdukOONiGXcBB-85JZYDhQ <br><br>
+                        Antonio Vital Sampol:<br> https://www.youtube.com/channel/UCPdFjigh-DyfqS_SAC_-cnA <br><br>
+                        Amanda Shimkus: <br>https://www.youtube.com/channel/UC2rsLiUXpqPHiT38_txhOvw <br><br>
+                        Dr. Robson Sitta: <br>https://www.youtube.com/channel/UCb7a5Qoaw98JZaAt44rTqtg <br><br>
+                        Ceará Drones:<br> https://www.youtube.com/channel/UCa-41rsxdlhf3Nptt00_ubQ <br><br>
+                        Brunna Alves:<br> https://www.youtube.com/channel/UCbM67vw-0ZNo6p-r_HIweFw <br><br>
+                        Davi Cirino: <br>https://www.youtube.com/channel/UCe45alWsQrvY126kSigP0yA <br><br>
+                        Centro de Telessaúde HC-UFMG<br>
+                        https://www.youtube.com/channel/UCnyFZr3wJBAJRjcqr_Q5Gug <br><br>
+                        Izabel Gomes:<br> https://www.youtube.com/channel/UCd90N1dioMUaMvO44MOempA <br><br>
+                        Ana maria pulido: <br>https://www.youtube.com/channel/UClNAVbH9TG9VGGod_iPey_g<br>  <br>
+                        TV Unesp: <br>https://www.youtube.com/channel/UCaRwlcHcvQbrfdbTF500zLA <br><br>
+
+                        
+
+                        <div class="dcredito" id="dcredito">
+                           
+                            <div style="background-image: url('img/logo/3.png')" class="logocredito"></div>
+                            <div style="background-image: url('img/logo/pegavisao.png')" class="logocredito"></div>
+                            <div style="background-image: url('img/logo/smd.png')" class="logocredito"></div>
+                            <div style="background-image: url('img/logo/ufc.png')" class="logocredito"></div><br><br><br><br><br><br><br>
+                            <div style="position:absolute; top:3000px">
+                                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                            </div>
+                        
+
+                            
+                        </div>
+
+                    </p>
+                    
+                </div>
+
+            </div>
+
+        </div>
+            <div class="video">
+                <div class="quadrinho"></div>
+                <div class="textoi">Vídeos</div>
+                <!--visao-->
+                <div  style="background-image: url('img/thumb/visao.png')" class="quadroMaior" onclick="iniciaModal('modal-video', 'A8jLk_AqRDM')"></div>
+                <!--depressão-->
+                <div style="background-image: url('img/thumb/depressao.png')" class="quadroMaior" onclick="iniciaModal('modal-video', '-MVeSBS570Q')"></div>
+                <!--hemiplegia-->
+                <div style="background-image: url('img/thumb/hemiplegia.png')" class="quadroMaior" onclick="iniciaModal('modal-video', 'MtLrvFwfmC0')"></div>
+                <!--raciocinio-->
+                <div style="background-image: url('img/thumb/raciocinio.png')" class="quadroMaior" onclick="iniciaModal('modal-video', 'zDgQf2NRiHw')"></div>
+                <!--fala-->
+                <div style="background-image: url('img/thumb/fala.png')" class="quadroMaior" onclick="iniciaModal('modal-video', 'Ct_4UW0EKAE')"></div>
+            </div>
+            
+    </div>
+</body>
+</html>

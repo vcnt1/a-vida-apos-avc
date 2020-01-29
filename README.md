@@ -10,4 +10,5 @@ Modelos 3D feitos por Dimas Gabriel.
 
 Vídeos feitos por Rodrigo Vasconscelos.
 
-Os modelos 3D não estão renderizando pois o projeto precisa estar hospedado, mas o resto é para estar OK.
+Projeto funcionando:
+https://a-vida-pos-avc.herokuapp.com/
